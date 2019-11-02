@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h2.pb-2.mt-4.mb-2.border-bottom Login
+  p Please login using this form
+  form(action="/users/login", method="post")
+    .form-group
+      label Username
+      input.form-control(name='username', type='text', placeholder='Enter Username')
+    .form-group
+      label Password
+      input.form-control(name='password', type='password', placeholder='Enter Password')
+    input.btn.btn-primary(type='submit', name='submit', value='Login')
